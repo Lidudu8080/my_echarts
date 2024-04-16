@@ -1,23 +1,22 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite + Vue</title>
-</head>
-
-<body>
-  <div id="app"></div>
-  <script type="module" src="/src/main.js"></script>
-  <script type="text/javascript">
-    window._AMapSecurityConfig = {
-      securityJsCode: '68a25b9571e6724d7860ae4452785f55',
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Vue</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+    <script type="text/javascript">
+      // window._AMapSecurityConfig 是一个全局对象，用于存储高德地图API的安全配置信息
+      window._AMapSecurityConfig = {
+          //securityJsCode 属性是一个字符串，表示通过安全验证后生成的安全码（security code）。该安全码用于验证你的网站是否有权限使用高德地图API。
+          securityJsCode:'0e6d9307db906c55d215ac0d2960b44f',//这里是随机生成的，需要更换为自己的
+      }
   </script>
   <script type="text/javascript"
-    src="https://webapi.amap.com/maps?v=2.0&key=3160caafca78ed52744bac63e06106cb&plugin=AMap.MouseTool,AMap.PolyEditor,AMap.MapType,AMap.ControlBar,AMap.ToolBar,AMap.ElasticMarker,AMap.HawkEye,AMap.DistrictSearch,AMap.MarkerClusterer,AMap.AutoComplete,AMap.PlaceSearch"></script>
-</body>
-
+            src="https://webapi.amap.com/maps?v=2.0&key=94fa19f37b000b781bb1a25eb365878c&plugin=AMap.MouseTool,AMap.PolyEditor,AMap.MapType,AMap.ControlBar,AMap.ToolBar,AMap.ElasticMarker,AMap.HawkEye,AMap.DistrictSearch,AMap.MarkerClusterer,AMap.AutoComplete,AMap.PlaceSearch"></script>
+  </body>
 </html>

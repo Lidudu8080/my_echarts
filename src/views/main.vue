@@ -3,7 +3,7 @@
   <div class="contain" ref="appRef">
     <!-- 头部 -->
     <div class="top-title">
-      <div class="top-title-text">智慧广电综合公服信息管理平台-龙泉驿区</div>
+      <div class="top-title-text">高德地图</div>
       <div class="tab-box">
         <div
           :class="{
@@ -42,7 +42,14 @@ const map = ref();
 //创建地图初始化方法
 const initMap = () => {
   new AMap.Map("map", {
+    // 初始化中心点
     center: center.value,
+    // 缩放级别
+    layers: [AMap.createDefaultLayer()],
+    zoom: 11.5,
+    viewMode: "2D",
+    //地图样式
+    mapStyle: "amap://styles/darkblue",
   });
 };
 
@@ -51,6 +58,7 @@ onMounted(() => {
   const { calcRate, windowDraw } = useMain(appRef.value);
   calcRate();
   windowDraw();
+  initMap();
 });
 </script>
 
