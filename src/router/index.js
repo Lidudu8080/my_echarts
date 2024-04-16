@@ -1,6 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router"
 
-
 const routes = [
     {
         path: "/",
@@ -18,24 +17,11 @@ const routes = [
                 title: "首页",
                 component: () => import("@/views/home.vue")
             },
-            // {
-            //     path:"page1",
-            //     name:"page1",
-            //     title:"应急广播",
-            //     component :()=>import("@/views/partyBuilding.vue")
-            // },
-            // {
-            //     path:"page2",
-            //     name:"page2",
-            //     title:"雪亮工程",
-            //     component :()=>import("@/views/production.vue")
-            // },
-            // {
-            //     path:"page3",
-            //     name:"page3",
-            //     title:"公共服务",
-            //     component :()=>import("@/views/manage.vue")
-            // },
         ]
     }
 ]
+
+export default createRouter({
+    routes,
+    history: createWebHashHistory()
+})
